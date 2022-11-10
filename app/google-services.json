@@ -1,0 +1,135 @@
+{
+  "project_info": {
+    "project_number": "134630464401",
+    "firebase_url": "https://test3-f6097-default-rtdb.firebaseio.com",
+    "project_id": "test3-f6097",
+    "storage_bucket": "test3-f6097.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:134630464401:android:df57139e24f9b74ab51830",
+        "android_client_info": {
+          "package_name": "com.dima_shpiklirnyi.testingwork"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "134630464401-g4qk4bp0rjtu5tf4e92cdc70p8ms7o90.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgqNBSJ9CgkZfLLf7VNdYmlM070keayIQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "134630464401-g4qk4bp0rjtu5tf4e92cdc70p8ms7o90.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:134630464401:android:27ab420d0ffd3e55b51830",
+        "android_client_info": {
+          "package_name": "com.dizmo.mytelegram"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "134630464401-u2bck6rokkqkc42r2dpgr3m08emitjur.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dizmo.mytelegram",
+            "certificate_hash": "9b74c16c743d9bac70f28baedfc0fa0410474e85"
+          }
+        },
+        {
+          "client_id": "134630464401-g4qk4bp0rjtu5tf4e92cdc70p8ms7o90.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgqNBSJ9CgkZfLLf7VNdYmlM070keayIQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "134630464401-g4qk4bp0rjtu5tf4e92cdc70p8ms7o90.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:134630464401:android:f71ed48ed35da23fb51830",
+        "android_client_info": {
+          "package_name": "com.example.wether2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "134630464401-g4qk4bp0rjtu5tf4e92cdc70p8ms7o90.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgqNBSJ9CgkZfLLf7VNdYmlM070keayIQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "134630464401-g4qk4bp0rjtu5tf4e92cdc70p8ms7o90.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:134630464401:android:398e6467ae3daa9db51830",
+        "android_client_info": {
+          "package_name": "com.example.wether2.fragment"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "134630464401-g4qk4bp0rjtu5tf4e92cdc70p8ms7o90.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgqNBSJ9CgkZfLLf7VNdYmlM070keayIQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "134630464401-g4qk4bp0rjtu5tf4e92cdc70p8ms7o90.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
