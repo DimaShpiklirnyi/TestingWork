@@ -5,8 +5,9 @@ import com.dima_shpiklirnyi.testingwork.domain.Interfaces.FireBase
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.ValueEventListener
+import javax.inject.Inject
 
-class FireBaseRepository : FireBase {
+class FireBaseRepository  : FireBase {
 
     override fun getItems(limit: Int, function: (List<NotesModel>) -> Unit) {
         REF_DATABASE_ROOT.child(NODE_TESTING_WORK).orderByChild("time").limitToLast(limit+1)

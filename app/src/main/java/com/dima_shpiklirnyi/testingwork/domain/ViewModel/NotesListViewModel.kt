@@ -12,8 +12,8 @@ import kotlinx.coroutines.*
 
 
 class NotesListViewModel(
-    private val time: Time, private val fireBase: FireBase,
-    private val roomRealization: NotesRepositoryRealization
+    val time: Time, val fireBase: FireBase,
+    val roomRealization: NotesRepositoryRealization
 ) : ViewModel() {
 
     var liveDataDb = roomRealization.allNotes

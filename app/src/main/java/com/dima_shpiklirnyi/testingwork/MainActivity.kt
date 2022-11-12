@@ -4,6 +4,8 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
+import com.dima_shpiklirnyi.testingwork.App.APP
+import com.dima_shpiklirnyi.testingwork.DI.DaggerAppComponent
 import com.dima_shpiklirnyi.testingwork.Repository.FirebaseServer.initFirebase
 import com.dima_shpiklirnyi.testingwork.databinding.ActivityMainBinding
 
@@ -16,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         mBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(mBinding.root)
         //Константа контекста MainActivity
+
         MAIN = this
         //Реализация навигации
         val navHostFragment =

@@ -3,8 +3,9 @@ package com.dima_shpiklirnyi.testingwork.Repository.RoomDb.RoomRepository
 import androidx.lifecycle.LiveData
 import com.dima_shpiklirnyi.testingwork.Models.NotesModel
 import com.dima_shpiklirnyi.testingwork.Repository.RoomDb.Dao.NotesDao
+import javax.inject.Inject
 
-class NotesRepositoryRealization(private val notesDao: NotesDao):NotesRepository
+class NotesRepositoryRealization @Inject constructor(val notesDao: NotesDao):NotesRepository
 {
     override val allNotes: LiveData<List<NotesModel>>
         get() = notesDao.getAllNotes()

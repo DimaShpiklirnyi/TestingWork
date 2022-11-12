@@ -12,21 +12,33 @@ import com.dima_shpiklirnyi.testingwork.Adapter.AdapterListNotes
 import com.dima_shpiklirnyi.testingwork.MAIN
 import com.dima_shpiklirnyi.testingwork.Models.NotesModel
 import com.dima_shpiklirnyi.testingwork.R
+import com.dima_shpiklirnyi.testingwork.appCompanent
 import com.dima_shpiklirnyi.testingwork.databinding.FragmentNotesListBinding
 import com.dima_shpiklirnyi.testingwork.domain.Interfaces.NoInternetFunc
 import com.dima_shpiklirnyi.testingwork.domain.UseCase.ChekInternetConnection
 import com.dima_shpiklirnyi.testingwork.domain.ViewModel.NotesListViewModel
 import com.dima_shpiklirnyi.testingwork.domain.ViewModel.NotesListViewModelFactory
 import com.google.android.material.snackbar.Snackbar
+import dagger.internal.InjectedFieldSignature
 import kotlinx.android.synthetic.main.activity_main.*
+import javax.inject.Inject
 
-class NotesListFragment : Fragment(), NoInternetFunc {
-    private lateinit var mBinding: FragmentNotesListBinding
-    private lateinit var viewModel: NotesListViewModel
-    private lateinit var mAdapter: AdapterListNotes
-    private lateinit var chekInternet: ChekInternetConnection
-    private var isCompleteServerGetData = false
-    private var listEmpty = true
+class NotesListFragment  : Fragment(), NoInternetFunc {
+
+    lateinit var mBinding: FragmentNotesListBinding
+    lateinit var viewModel: NotesListViewModel
+    lateinit var mAdapter: AdapterListNotes
+    @Inject lateinit var vmFactory: NotesListViewModelFactory
+    var isCompleteServerGetData = false
+    var listEmpty = true
+
+   @Inject lateinit var chekInternet: ChekInternetConnection
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        appCompanent.inject(this)
+
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -54,7 +66,7 @@ class NotesListFragment : Fragment(), NoInternetFunc {
         mBinding.rvNotesList.adapter = mAdapter
         //Подключаем viewModel
         viewModel =
-            ViewModelProvider(MAIN, NotesListViewModelFactory(MAIN)).get(
+            ViewModelProvider(MAIN, vmFactory).get(
                 NotesListViewModel::class.java
             )
         //Узнаем о наличии данных в базе данных.
@@ -99,8 +111,7 @@ class NotesListFragment : Fragment(), NoInternetFunc {
 
     override fun onResume() {
         super.onResume()
-        if (chekInternet.isOnline()) internetView()
-        else noInternetView()
+
     }
 
     fun initProgressBar() {

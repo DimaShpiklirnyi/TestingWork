@@ -13,10 +13,12 @@ import com.dima_shpiklirnyi.testingwork.MAIN
 import com.dima_shpiklirnyi.testingwork.MainActivity
 import com.dima_shpiklirnyi.testingwork.Models.NotesModel
 import com.dima_shpiklirnyi.testingwork.R
+import com.dima_shpiklirnyi.testingwork.appCompanent
 import com.dima_shpiklirnyi.testingwork.domain.ViewModel.NotesListViewModel
 import com.dima_shpiklirnyi.testingwork.domain.ViewModel.NotesListViewModelFactory
 import com.dima_shpiklirnyi.testingwork.domain.UseCase.Time
 import com.dima_shpiklirnyi.testingwork.databinding.FragmentViewAndEditNotesBinding
+import javax.inject.Inject
 
 
 class ViewAndEditNotesFragment : Fragment(), MenuProvider {
@@ -26,7 +28,13 @@ class ViewAndEditNotesFragment : Fragment(), MenuProvider {
     private lateinit var saveBut: MenuItem
     private lateinit var time: Time
     private lateinit var viewModel: NotesListViewModel
+    @Inject
+    lateinit var vmFactoryEdit: NotesListViewModelFactory
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        appCompanent.inject(this)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -75,7 +83,7 @@ class ViewAndEditNotesFragment : Fragment(), MenuProvider {
 //Инициализация viewModel и отображение информации в заметках
     private fun init() {
         viewModel =
-            ViewModelProvider(MAIN, NotesListViewModelFactory(activity as MainActivity)).get(
+            ViewModelProvider(MAIN, vmFactoryEdit).get(
                 NotesListViewModel::class.java
             )
         time = Time()

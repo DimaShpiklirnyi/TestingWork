@@ -8,11 +8,12 @@ import android.net.NetworkCapabilities
 import android.net.NetworkRequest
 import android.os.Build
 import com.dima_shpiklirnyi.testingwork.domain.Interfaces.NoInternetFunc
+import javax.inject.Inject
 
 
-class ChekInternetConnection(
-    private val context: Context,
-    private val noInternetFunc: NoInternetFunc
+class ChekInternetConnection (
+    val context: Context,
+    val noInternetFunc: NoInternetFunc
 ) {
     fun isOnline(): Boolean {
         val cm = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
